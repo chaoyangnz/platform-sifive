@@ -3,7 +3,7 @@
     "f_cpu": "320000000L",
     "freedom-e-sdk": {
       "ldscript": "metal.default.lds",
-      "variant": "sifive-hifive1-revb"
+      "variant": "sparkfun-redv-thing"
     },
     "hwids": [
       [
