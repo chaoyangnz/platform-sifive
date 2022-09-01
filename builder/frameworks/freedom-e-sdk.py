@@ -279,6 +279,26 @@ copyfile(
     join(include_path, "inline.h")
 )
 
+# we also copy to framework metal folder so that better debug experience in CLion
+metal_path = join(FRAMEWORK_DIR, "freedom-metal", "metal", "machine")
+if not isdir(metal_path):
+    makedirs(metal_path)
+
+copyfile(
+    join(FRAMEWORK_DIR, "bsp", target, "metal.h"),
+    join(FRAMEWORK_DIR, "freedom-metal", "metal", "machine.h")
+)
+
+copyfile(
+    join(FRAMEWORK_DIR, "bsp", target, "metal-platform.h"),
+    join(FRAMEWORK_DIR, "freedom-metal", "metal", "machine", "platform.h")
+)
+
+copyfile(
+    join(FRAMEWORK_DIR, "bsp", target, "metal-inline.h"),
+    join(FRAMEWORK_DIR, "freedom-metal", "metal", "machine", "inline.h")
+)
+
 #
 # Target: Build Metal Libraries
 #
